@@ -26,3 +26,5 @@ https://sqlitebrowser.org/dl/
 https://www.postman.com/downloads/
 
 https://stackoverflow.com/questions/44941757/sqlalchemy-exc-operationalerror-sqlite3-operationalerror-no-such-table
+
+https://www.programcreek.com/python/example/81989/app.db.drop_all
