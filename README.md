@@ -20,3 +20,5 @@ https://docs.sqlalchemy.org/en/20/intro.html#installation
 https://pypi.org/project/Flask-SQLAlchemy/
 
 https://www.toptal.com/developers/gitignore/
+
+https://sqlitebrowser.org/dl/
