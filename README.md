@@ -22,3 +22,5 @@ https://pypi.org/project/Flask-SQLAlchemy/
 https://www.toptal.com/developers/gitignore/
 
 https://sqlitebrowser.org/dl/
+
+https://www.postman.com/downloads/
