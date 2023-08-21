@@ -22,10 +22,11 @@ def _set_sqlite_pragma(dbapi_connection, connection_record):
         cursor.execute("PRAGMA foreign_keys=ON;")
         cursor.close()
 
+
 db = SQLAlchemy(app)
 now = datetime.now()
 
-#MODELS
+# models
 class User(db.Model):
     __tablename__ = "user"
     id = db.Column(db.Integer, primary_key=True)
@@ -45,7 +46,7 @@ class BlogPost(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
 
-    # routes
+# routes
 @app.route("/user", methods=["POST"])
 def create_user():
     data = request.get_json()

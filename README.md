@@ -24,3 +24,5 @@ https://www.toptal.com/developers/gitignore/
 https://sqlitebrowser.org/dl/
 
 https://www.postman.com/downloads/
+
+https://stackoverflow.com/questions/44941757/sqlalchemy-exc-operationalerror-sqlite3-operationalerror-no-such-table
