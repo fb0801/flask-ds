@@ -6,6 +6,15 @@ Data structures with Flask by building a Flask API with Python
 
 ## Issues: 
 
+```
+Fix no user tbl issue by using -> app.app_context().push()
+
+then:
+from server import db
+>>> db.create_all()
+>>> exit()
+```
+
 
 ## Resources used:
 
@@ -28,3 +37,15 @@ https://www.postman.com/downloads/
 https://stackoverflow.com/questions/44941757/sqlalchemy-exc-operationalerror-sqlite3-operationalerror-no-such-table
 
 https://www.programcreek.com/python/example/81989/app.db.drop_all
+
+https://stackoverflow.com/questions/64233968/sqlalchemy-no-such-table-user
+
+https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/quickstart/
+
+https://stackoverflow.com/questions/20744277/sqlalchemy-create-all-does-not-create-tables
+
+https://www.reddit.com/r/flask/comments/ykm1w4/dbcreate_all_not_working/
+
+https://python-forum.io/thread-39328.html
+
+https://stackoverflow.com/questions/31444036/runtimeerror-working-outside-of-application-context

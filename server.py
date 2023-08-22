@@ -4,6 +4,7 @@ from sqlalchemy import event
 from sqlalchemy.engine import Engine
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+#from flask_migrate import Migrate
 
 import random
 
@@ -13,6 +14,7 @@ app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///sqlitedb.file"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = 0
+app.app_context().push()
 
 # configure sqlite3 to enforce foreign key constraints
 @event.listens_for(Engine, "connect")
@@ -22,9 +24,11 @@ def _set_sqlite_pragma(dbapi_connection, connection_record):
         cursor.execute("PRAGMA foreign_keys=ON;")
         cursor.close()
 
-
 db = SQLAlchemy(app)
+
 now = datetime.now()
+#with app.app_context():
+#    db.create_all()
 
 # models
 class User(db.Model):
@@ -45,6 +49,9 @@ class BlogPost(db.Model):
     date = db.Column(db.Date)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
+#with db.app_context():
+#    db.create_all()
+    
 
 # routes
 @app.route("/user", methods=["POST"])
@@ -93,6 +100,8 @@ def delete_last_10():
     pass
 
 
+
 if __name__ == "__main__":
     app.run(debug=True)
+   
 
