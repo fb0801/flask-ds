@@ -9,15 +9,15 @@ class LinkedList:
         self.last_node = None
 
     def to_array(self):
-        arr = []
+        l = []
         if self.head is None:
-            return arr
+            return l
 
         node = self.head
         while node:
-            arr.append(node.data)
+            l.append(node.data)
             node = node.next_node
-        return arr 
+        return l
 
     def print_ll(self):
         ll_string = ""
