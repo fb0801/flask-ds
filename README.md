@@ -50,3 +50,11 @@ https://www.reddit.com/r/flask/comments/ykm1w4/dbcreate_all_not_working/
 https://python-forum.io/thread-39328.html
 
 https://stackoverflow.com/questions/31444036/runtimeerror-working-outside-of-application-context
+
+https://www.reddit.com/r/flask/comments/11cvk3x/trying_to_get_user_infos/
+
+http://www.freekb.net/Article?id=4668
+
+https://stackoverflow.com/questions/75523569/runtimeerror-a-sqlalchemy-instance-has-already-been-registered-on-this-flask
+
+https://stackoverflow.com/questions/49388628/it-is-necessary-use-db-init-app-or-sqlalchemyapp-is-the-same-in-flask
