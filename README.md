@@ -9,7 +9,8 @@ Data structures with Flask by building a Flask API with Python
 ```
 Fix no user tbl issue by using within server.py underneath config-> app.app_context().push() 
 
-then:
+then in terminal:
+python
 from server import db
 >>> db.create_all()
 >>> exit()
