@@ -16,6 +16,13 @@ from server import db
 >>> exit()
 ```
 
+```
+fixed -> did you forget to call 'init_app', or did you create multiple 'sqlalchemy' instances? using db.init(app)
+
+but could not fix RuntimeError: A 'SQLAlchemy' instance has already been registered on this Flask app. Import and use that instance instead. issue 
+
+```
+
 
 ## Resources used:
 
