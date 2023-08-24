@@ -1,12 +1,13 @@
 from random import randrange
 from sqlite3 import Connection as SQLite3Connection
 from datetime import datetime
-from faker import Faker 
+from faker import Faker
 from sqlalchemy import event
 from sqlalchemy.engine import Engine
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import server
+
 
 # app
 app = Flask(__name__)
@@ -14,8 +15,6 @@ app = Flask(__name__)
 # config
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///sqlitedb.file"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = 0
-#app.config["SQLALCHEMY_ECHO"] = True
-#app.config["SQLALCHEMY_RECORD_QUERIES"] = True
 
 # configure sqlite3 to enforce foreign key contraints
 @event.listens_for(Engine, "connect")
@@ -27,11 +26,11 @@ def _set_sqlite_pragma(dbapi_connection, connection_record):
 
 
 db = SQLAlchemy(app)
-now = datetime.now()
 db.init_app(app)
 
-faker = Faker()
+now = datetime.now()
 
+faker = Faker()
 
 # create dummy users
 for i in range(200):
@@ -55,4 +54,3 @@ for i in range(200):
     )
     db.session.add(new_blog_post)
     db.session.commit()
-
