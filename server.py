@@ -6,6 +6,7 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 #from flask_migrate import Migrate
 import linked_list
+import hash_table
 
 import random
 
